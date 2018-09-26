@@ -19,7 +19,6 @@ Page({
       return
     }
 
-
     // 获取用户信息
     wx.getSetting({
       success: res => {

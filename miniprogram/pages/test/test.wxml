@@ -8,6 +8,7 @@
          <image src="{{item.filePath}}"></image>
         </view>
       </view>
+      
       <view>
         <button size="mini" type="default" bindtap="onQuery">查询记录</button>
           <button bindtap='getImgs'>获取上传图片</button>
