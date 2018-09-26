@@ -8,7 +8,8 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    helloTest: '2222'
+    helloTest: '2222',
+     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   onLoad: function() {
@@ -34,19 +35,36 @@ Page({
             }
           })
         } else {
-
+          //不强制让用户授权，否则不会微信拒掉
+          // wx.showModal({
+          //   title: '授权提示',
+          //   content: '小程序需要您的微信授权才能使用哦~ 错过授权页面的处理方法：删除小程序->重新搜索进入->点击授权按钮'
+          // })
         }
       }
     })
   },
-
+  canILogin() {
+    if (!wx.canIUse('button.open-type.getUserInfo')) { // 对应的功能就是通过按钮获取用户资料
+          wx.showModal({
+            title: '授权提示',
+            content: '小程序需要您的微信授权才能使用哦~ 错过授权页面的处理方法：删除小程序->重新搜索进入->点击授权按钮'
+          })
+    }
+  },
   onGetUserInfo: function(e) {
+
     if (!this.logged && e.detail.userInfo) {
       this.setData({
         logged: true,
         avatarUrl: e.detail.userInfo.avatarUrl,
         userInfo: e.detail.userInfo
       })
+    } else {
+                wx.showModal({
+            title: '授权提示',
+            content: '小程序需要您的微信授权才能使用哦~ 错过授权页面的处理方法：删除小程序->重新搜索进入->点击授权按钮'
+          })
     }
   },
 

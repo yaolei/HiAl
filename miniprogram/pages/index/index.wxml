@@ -4,6 +4,7 @@
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
+      wx:if="{{canIUse}}"
       open-type="getUserInfo"
       bindgetuserinfo="onGetUserInfo"
       class="userinfo-avatar"
@@ -14,7 +15,7 @@
     </view> -->
     <view>{{nickName}}</view>
   </view>
-
+<button class='hiddenbtn' bindgetuserinfo='login' open-type='getUserInfo' bindtap='canILogin'>点击登录</button>
   <view>
    <navigator url="../test/test" open-type="navigate" class="uploader-text">
     <text>{{helloTest}}</text>
