@@ -4,8 +4,8 @@
      <!-- <button size="mini" type="default" bindtap="onAdd">新增记录</button> -->
 
       <view wx:if="{{queryResult}}">
-        <view wx:for="{{queryResult}}" wx:key="keyInd" wx:for-index="index" wx:for-item="item">
-         <image src="{{item.filePath}}"></image>
+        <view wx:for="{{imgPath}}" wx:key="keyInd" wx:for-index="index" wx:for-item="item">
+         <image src="{{item.tempFileURL}}"></image>
         </view>
       </view>
       
@@ -13,6 +13,5 @@
         <button size="mini" type="default" bindtap="onQuery">查询记录</button>
           <button bindtap='getImgs'>获取上传图片</button>
       </view>
-
   </view>
 </view>
