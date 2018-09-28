@@ -8,7 +8,7 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    helloTest: '2222',
+    helloTest: '显示图片',
      canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
