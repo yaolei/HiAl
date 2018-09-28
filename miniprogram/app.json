@@ -30,7 +30,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/databaseGuide/databaseGuide",
+        "pagePath": "pages/cart/cart",
         "iconPath": "images/cart.png",
         "selectedIconPath": "images/cart_1.png",
         "text": "购物车"

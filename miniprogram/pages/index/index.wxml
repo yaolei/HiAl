@@ -22,7 +22,11 @@
     </navigator>
   </view>
 
-
+  <view>
+   <navigator url="../cart/cart" open-type="switchTab" class="uploader-text">
+    <text>tarbar</text>
+    </navigator>
+  </view>
   <!-- 上传图片 -->
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
