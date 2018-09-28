@@ -1,6 +1,12 @@
 <!--index.wxml-->
 <view class="container">
-
+<view>
+        <view wx:if="{{HeadPath}}">
+        <view wx:for="{{HeadPath}}" wx:key="keyInd" wx:for-index="index" wx:for-item="item">
+         <image src="{{item.tempFileURL}}"></image>
+        </view>
+      </view>
+</view>
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
@@ -10,9 +16,9 @@
       class="userinfo-avatar"
       style="background-image: url({{avatarUrl}})"
     ></button>
-    <view>
+    <!-- <view>
           <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
-    </view>
+    </view> -->
     <view>{{nickName}}</view>
   </view>
 <button class='hiddenbtn' bindgetuserinfo='login' open-type='getUserInfo' bindtap='canILogin'>点击登录</button>

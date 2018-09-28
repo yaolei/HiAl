@@ -21,36 +21,9 @@ Page({
   },
 
   getTemImgs: function(fileIds) {
-      // wx.showLoading({
-      //     title: '上传中',
-      // });
-
-    // wx.cloud.downloadFile({
-    //   fileID: fileId, // 文件 ID
-    //   success: res => {
-    //     debugger
-    //     // this.setData({
-    //     //   filePath
-    //     // })
-    //   },
-    //   fail: console.error,
-    //   complete: () => {
-    //     wx.hideLoading()
-    //   }
-    // })
-
     wx.cloud.getTempFileURL({
       fileList: fileIds,
       success: res => {
-        // res.fileList[0].tempFileURL
-
-        // fileList 是一个有如下结构的对象数组
-        // [{
-        //    fileID: 'cloud://xxx.png', // 文件 ID
-        //    tempFileURL: '', // 临时文件网络链接
-        //    maxAge: 120 * 60 * 1000, // 有效期
-        // }]
-        // console.log(res.fileList)
         this.setData({
           imgPath:res.fileList
         })
@@ -58,8 +31,6 @@ Page({
       },
       fail: console.error
     })
-
-
   },
 
 

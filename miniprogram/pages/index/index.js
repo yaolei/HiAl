@@ -9,7 +9,8 @@ Page({
     takeSession: false,
     requestResult: '',
     helloTest: '显示图片',
-     canIUse: wx.canIUse('button.open-type.getUserInfo')
+    HeadPath: [],
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
   onLoad: function() {
@@ -19,6 +20,21 @@ Page({
       })
       return
     }
+    // 
+
+    const headImg = ['cloud://hiagenv-9dce7d.6869-hiagenv-9dce7d/headImg/headImg.jpg'];
+    wx.cloud.getTempFileURL({
+      fileList: headImg,
+      success: res => {
+        this.setData({
+          HeadPath: res.fileList
+        })
+        console.log('图片临时地址', res)
+      },
+      fail: console.error
+    })
+
+
 
     // 获取用户信息
     wx.getSetting({
@@ -109,7 +125,7 @@ Page({
         const filePath = res.tempFilePaths[0]
         
         // 上传图片
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
+        const cloudPath = 'headImg' + filePath.match(/\.[^.]+?$/)[0]
         wx.cloud.uploadFile({
           cloudPath,
           filePath,
