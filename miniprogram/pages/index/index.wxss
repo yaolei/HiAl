@@ -135,3 +135,35 @@ page {
   line-height: 36rpx;
   word-break: break-all;
 }
+.img-box{
+    position: relative;
+    width:200px;
+    margin-bottom: 20px;
+}
+.HeadTopImg {
+  width: 95%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: block;
+  -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,1),rgba(0,0,0,0.5));
+}
+.addressstyle {
+  line-height:30px;
+}
+.addressstyle image{
+  width:30px;
+  height:30px;
+  margin-left:10px;
+}
+.addressView {
+  width: 95%;
+  line-height: 40px;
+  border-top: solid 1px #a5a5a5;
+  border-bottom: solid 1px #a5a5a5;
+  margin-top:20px;
+  margin-left:10px;
+}
+.addressInfo {
+  top:20%;
+  color: #a5a5a5;
+}

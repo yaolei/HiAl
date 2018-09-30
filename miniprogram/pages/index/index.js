@@ -10,6 +10,7 @@ Page({
     requestResult: '',
     helloTest: '显示图片',
     HeadPath: [],
+    addressInfo: '沈阳市和平区大东路28号',
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 

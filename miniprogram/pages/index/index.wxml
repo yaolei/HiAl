@@ -1,12 +1,21 @@
 <!--index.wxml-->
-<view class="container">
-<view>
-        <view wx:if="{{HeadPath}}">
-        <view wx:for="{{HeadPath}}" wx:key="keyInd" wx:for-index="index" wx:for-item="item">
-         <image src="{{item.tempFileURL}}"></image>
-        </view>
-      </view>
+<view wx:if="{{HeadPath}}">
+    <view wx:for="{{HeadPath}}" wx:key="keyInd" wx:for-index="index" wx:for-item="item">
+    <div class="img-box">
+        <image src="{{item.tempFileURL}}" class='HeadTopImg'></image>
+    </div>
+    </view>
 </view>
+<view class='addressView'>
+  <div class='addressstyle'>
+    <image src='../../images/coordinates.png'></image>
+  </div>
+  <div class='addressInfo'>
+    {{addressInfo}}
+  </div>
+</view>
+<view class="container">
+
   <!-- 用户 openid -->
   <view class="userinfo">
     <button 
