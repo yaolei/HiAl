@@ -148,12 +148,8 @@ page {
   -webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5),rgba(0,0,0,1),rgba(0,0,0,0.5));
 }
 .addressstyle {
-  line-height:30px;
-}
-.addressstyle image{
-  width:30px;
-  height:30px;
-  margin-left:10px;
+  float:left;
+  height:42px;
 }
 .addressView {
   width: 95%;
@@ -164,6 +160,34 @@ page {
   margin-left:10px;
 }
 .addressInfo {
-  top:20%;
-  color: #a5a5a5;
+  float:left;
+  color: #2e2b2b;
+  vertical-align: middle;
+  line-height: 42px;
+  font-size: 20px;
+}
+.location_icon {
+    margin-left:10px;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.phonestyle {
+  float:right;
+  height:42px;
+}
+.phone_icon {
+    margin-right:15px;
+    margin-left:5px;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+}
+.divider {
+  float:right;
+  width: 2px;
+  height: 50%;
+  line-height: 50%;
+  background: rgb(197, 191, 191);
+  margin-top: 21rpx;
 }

@@ -8,10 +8,16 @@
 </view>
 <view class='addressView'>
   <div class='addressstyle'>
-    <image src='../../images/coordinates.png'></image>
+    <image class='location_icon' src='../../images/coordinates.png'></image>
   </div>
   <div class='addressInfo'>
     {{addressInfo}}
+  </div>
+  <div class='phonestyle'>
+    <image class='phone_icon' src='../../images/phone.png'></image>
+  </div>
+  <div style="height:42px;float:right;">
+    <div class="divider"></div> 
   </div>
 </view>
 <view class="container">

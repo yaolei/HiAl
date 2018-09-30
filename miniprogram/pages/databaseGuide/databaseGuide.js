@@ -24,13 +24,13 @@ Page({
     const db = wx.cloud.database()
     db.collection('TestCounters').add({
       data: {
-        count: 1
+        count: 9
       },
       success: res => {
         // 在返回结果中会包含新创建的记录的 _id
         this.setData({
           counterId: res._id,
-          count: 1
+          count: 9
         })
         wx.showToast({
           title: '新增记录成功',

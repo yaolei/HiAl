@@ -23,7 +23,10 @@ Page({
     }
     // 
 
-    const headImg = ['cloud://hiagenv-9dce7d.6869-hiagenv-9dce7d/headImg/headImg.jpg'];
+    // const headImg = ['cloud://hiagenv-9dce7d.6869-hiagenv-9dce7d/headImg/headImg.jpg'];
+
+    const headImg = ['cloud://lyh-068e6f.6c79-lyh-068e6f/headImg/headImg.jpeg'];
+
     wx.cloud.getTempFileURL({
       fileList: headImg,
       success: res => {
